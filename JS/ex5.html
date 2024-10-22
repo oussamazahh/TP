@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <form id="converter">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+        
+        <label for="fromCurrency">From:</label>
+        <select id="fromCurrency" name="fromCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="MAD">MAD</option>
+        </select>
+        
+        <label for="toCurrency">To:</label>
+        <select id="toCurrency" name="toCurrency">
+            <option value="USD">USD</option>
+            <option value="EUR">EUR</option>
+            <option value="MAD">MAD</option>
+        </select>
+        
+        <button type="button" onclick="convertCurrency()">Convert</button>
+    </form>
+    
+    <h2 id="result"></h2>
+    
+    <script src="scrpit.js">
+    </script>
+</body>
+</html>

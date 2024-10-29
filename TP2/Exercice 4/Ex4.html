@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tp2 - Exercice 4</title>
+</head>
+
+<body>
+    <h1>Exercice 4 - Table de multiplication</h1>
+    <label for="number1">Choisie un nombre : </label>
+    <select id="number1" name="number1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    
+
+    <h2 id="result"></h2>
+</body>
+
+<script>
+
+    const number1 = document.getElementById('number1');
+    const result = document.getElementById('result');
+
+    number1.addEventListener('change', Table_multiplication);
+
+    function Table_multiplication() {
+        var i;
+        var table = "";
+        for (i = 1; i <= 10; i++) {
+            table += `${number1.value} * ${i} = ${number1.value * i} <br>`;
+        }
+        result.innerHTML = table;
+    }
+
+</script>
+
+</html>

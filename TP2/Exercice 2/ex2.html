@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tp2 - Exercice 2</title>
+</head>
+<body>
+    <h1>Comparateur de nombre avec select</h1>
+    <label for="number1">Premier nombre : </label>
+    <select id="number1" name="number1">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <label for="number2">Deuxième nombre : </label>
+    <select id="number2" name="number2">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <h2 id="result"></h2>
+</body>
+<script>
+    const number1 = document.getElementById('number1');
+    const number2 = document.getElementById('number2');
+    const result = document.getElementById('result');
+
+    number1.addEventListener('change', compareNumbers);
+    number2.addEventListener('change', compareNumbers);
+
+    function compareNumbers() {
+        if (number1.value > number2.value) {
+            result.textContent = `${number1.value} est plus grand que ${number2.value}`;
+        } 
+        if (number1.value < number2.value) {
+            result.textContent = `${number1.value} est plus petit que ${number2.value}`;
+        }
+        if (number1.value == number2.value) {
+            result.textContent = `${number1.value} est égal à ${number2.value}`;
+        }
+    }
+
+</script>
+</html>

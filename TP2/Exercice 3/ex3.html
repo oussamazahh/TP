@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tp2 - Exercice 3</title>
+</head>
+
+<body>
+    <h1>Exercice 3 - Comparaison de 2 nombres</h1>
+    <label for="number1">Selectionnez un nombre :</label>
+    <input type="radio" id="number1" name="number" value="1">
+    <label for="number1">1</label>
+    <input type="radio" id="number2" name="number" value="5">
+    <label for="number2">5</label>
+    <input type="radio" id="number3" name="number" value="10">
+    <label for="number3">10</label>
+
+    <h2 id="result"></h2>
+</body>
+
+<script>
+
+    const number1 = document.getElementById('number1');
+    const number2 = document.getElementById('number2');
+    const number3 = document.getElementById('number3');
+    const result = document.getElementById('result');
+
+    number1.addEventListener('change', compareNumbers);
+    number2.addEventListener('change', compareNumbers);
+    number3.addEventListener('change', compareNumbers);
+
+
+    function compareNumbers() {
+        var nombremasque = Math.floor(Math.random() * 10) + 1;
+        if (number1.checked) {
+            if (number1.value > nombremasque) {
+                result.textContent = `Messagae ==> Le nombre masque ${number1.value} est plus grand que ${nombremasque}`;
+            }
+            if (number1.value < nombremasque) {
+                result.textContent = `Messagae ==> Le nombre masque ${number1.value} est plus petit que ${nombremasque}`;
+            }
+            if (number1.value == nombremasque) {
+                result.textContent = `Messagae ==>Bravoooo Le nombre masque ${number1.value} est égal à ${nombremasque}`;
+            }
+        }
+        if (number2.checked) {
+            if (number2.value > nombremasque) {
+                result.textContent = `Messagae ==> Le nombre masque ${number2.value} est plus grand que ${nombremasque}`;
+            }
+            if (number2.value < nombremasque) {
+                result.textContent = `Messagae ==> Le nombre masque ${number2.value} est plus petit que ${nombremasque}`;
+            }
+            if (number2.value == nombremasque) {
+                result.textContent = `Messagae ==> Bravoooo Le nombre masque ${number2.value} est égal à ${nombremasque}`;
+            }
+        }
+        if (number3.checked) {
+            if (number3.value > nombremasque) {
+                result.textContent = `Messagae ==> Le nombre masque ${number3.value} est plus grand que ${nombremasque}`;
+            }
+            if (number3.value < nombremasque) {
+                result.textContent = `Messagae ==> Le nombre masque ${number3.value} est plus petit que ${nombremasque}`;
+            }
+            if (number3.value == nombremasque) {
+                result.textContent = `Messagae ==> Bravoooo Le nombre masque ${number3.value} est égal à ${nombremasque}`;
+            }
+        }
+    }
+</script>
+
+</html>
